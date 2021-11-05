@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"></style>
+</head>
+<body onload="populateNewForm()">
+    <div id="bodyHeader">
+        <h1>Reimbursement Form</h1>
+    </div>
+    <div class="input-group-mb3" id="inputsOne">
+
+        <label for="idInput">Employee ID: </label>
+        <input type="number" id="idInput" class="form-control-sm">
+
+        <label for="eventSelect">Event:</label>
+        <Select onchange="eventSelect()" id="eventSelect" name="eventSelect" class="form-control-sm">
+            <option value="default" class="eventOptions">--Please Select an Event--</option>
+        </Select>
+
+        
+        <label for="justificationInput">Justification</label>
+        <input type="text" id="justificationInput" class="form-control-sm">
+
+        <!-- <label for="firstNameInput">First Name </label>
+        <input type="text" id="firstNameInput" class="form-control-sm">
+
+        <label for="lastnameInput">Last Name </label>
+        <input type="text" id="lastNameInput" class="form-control-sm"> -->
+    </div>
+
+    <div class="input-group-mb3" id="inputsTwo">
+
+        <label for="eventID">Event ID:</label>
+        <input type="number" id="eventID" class="form-control-sm">
+    
+        <label for="eventType">Event Type:</label>
+        <Select id="eventType" name="eventType" class="form-control-sm">
+            <option id="University Course" value="University Course">University Course</option>
+            <option id="Seminar" value="Seminar">Seminar</option>
+            <option id="Certification Preparation" value="Certification Preparation">Certification Preparation</option>
+            <option id="Certification" value="Certification">Certification</option>
+            <option id="Technical Training" value="Technical Training">Technical Training</option>
+            <option id="Other" value="Other">Other</option>
+        </Select>
+
+        <label for="eventCoverage">Coverage:</label>
+        <Select id="eventCoverage" name="eventCoverage" class="form-control-sm">
+            <option id='0.15' value="0.15" type="number">15%</option>
+            <option id='0.25' value="0.25" type="number">25%</option>
+            <option id='0.3' value="0.3" type="number">30%</option>
+            <option id='0.5' value="0.5" type="number">50%</option>
+            <option id='0.6' value="0.6" type="number">60%</option>
+            <option id='0.75' value="0.75" type="number">75%</option>
+            <option id='0.8' value="0.8" type="number">80%</option>
+            <option id='0.9' value="0.9" type="number">90%</option>
+            <option id='1' value="1" type="number">100%</option>
+        </Select>
+
+        <label for="eventDate">Event Date: </label>
+        <input type="date" id="eventDate" class="form-control-sm">
+
+    </div>
+    <div class="input-group-mb3" id="inputThree">
+        <label for="eventCost">Event Cost</label>
+        <input type="number" id="eventCost" class="form-control-sm">
+      
+        <label for="eventLocation">Location: </label>
+        <input type="text" id="eventLocation" class="form-control-sm">
+
+        <label for="descriptionInput">Description</label>
+        <input type="text" id="descriptionInput" class="form-control-sm">
+    </div>
+
+    <div id="additionalFields" class="input-group-mb3">
+        <!-- Things will be placed here depending on the status, ex: more information required from applicant,
+         and things like that. -->
+        
+    </div>
+    <div id="formButtons" class="input-group-mb3">
+        <button onclick="submitForm()" id="submitButton" class>Submit Request</button>
+    </div>
+        
+
+    <script src="form.js"></script>
+</body>
+
+</html>

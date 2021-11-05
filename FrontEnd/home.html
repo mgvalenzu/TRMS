@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"></style>
+</head>
+<body onload="populateHome()">
+   <div id="bodyHeader">
+        <h1 id='welcome'>Welcome </h1>
+   </div>
+
+   <div>
+        <h2>New Reimbursement Request</h2>
+        <!-- <button onclick="location.href='./form.html'">Start New Request</button> -->
+        <button onclick="newForm()">Start New Request</button>
+        <button onclick="logout()">Log Out</button>
+        <span> 
+            <h3 id="department">Department:</h3>
+        </span>
+   </div>
+
+    <div>
+        <div id='active'>
+            <h3>Active Reimbursements</h3>
+            <table class='table' id='activeTable'>
+                <thead class='tableHead'>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Status</th>
+                        <th>Date Submitted</th>   
+                        <th>Event</th>        
+                        <th>Options</th>         
+                    </tr>
+                </thead>
+                <tbody class='tableBody' id='activeBody'>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div id = 'past'>
+            <br><h3>Past Reimbursements</h3>
+            <table class='table' id = 'pastTable'>
+                <thead class='tableHead'>
+                    <tr>
+                        <th class='requestIDP'>Request ID</th>
+                        <th class='finalStatus'>Final Status</th>
+                        <th class='dateCompleted'>Date Completed</th>
+                        <th class='dateCompleted'>Final Grade</th>
+                        <th class='dateCompleted'>Event</th>
+                    </tr>
+                </thead>
+                <tbody class='tableBody' id = 'pastBody'>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <br>
+        <div style='display: none;' id='supervisor'>
+            <h3>Supervisor Management</h3>
+            <table class='table' id = 'supervisorTable'>
+                <thead class='tableHead'>
+                    <tr>
+                        <th class='requestIDP'>Request ID</th>
+                        <th class='finalStatus'>Status</th>
+                        <th class='dateCompleted'>Date Submitted</th>
+                        <th class='dateCompleted'>Options</th>
+                    </tr>
+                </thead>
+                <tbody class='tableBody' id = 'supervisorBody'>
+                </tbody>
+            </table>
+        </div>
+
+        <div style='display: none;' id = 'deptHead'>
+            <h3>Department Head Management</h3>
+            <table class='table' id = 'deptTable'>
+                <thead class='tableHead'>
+                    <tr>
+                        <th class='requestIDP'>Request ID</th>
+                        <th class='finalStatus'>Status</th>
+                        <th class='dateCompleted'>Date Submitted</th>
+                        <th class='dateCompleted'>Options</th>
+                    </tr>
+                </thead>
+                <tbody class='tableBody' id = 'deptBody'>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style='display: none;' id='benco'>
+            <h3>Benefits Coordinator Management</h3>
+            <table class='table' id = 'bencoTable'>
+                <thead class='tableHead'>
+                    <tr>
+                        <th class='requestIDP'>Request ID</th>
+                        <th class='finalStatus'>Status</th>
+                        <th class='dateCompleted'>Date Submitted</th>
+                        <th class='dateCompleted'>Options</th>
+                    </tr>
+                </thead>
+                <tbody class='tableBody' id = 'bencoBody'>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>
