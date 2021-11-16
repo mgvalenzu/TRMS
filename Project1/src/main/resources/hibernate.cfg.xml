@@ -13,15 +13,12 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:postgresql://gabrielpostgres.cfwg11fgmasq.us-west-1.rds.amazonaws.com/postgres
         </property>
 
         <property name="hibernate.connection.username">
-            gabrielv
         </property>
 
         <property name="hibernate.connection.password">
-            United23
         </property>
 
         <!--        optional Properties-->
